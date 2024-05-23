@@ -10,7 +10,8 @@ fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=U
    
     let videoContainer = document.querySelector(".youtubeContainer")
     for(video of videos){
-        videoContainer.innerHTML += `
+        videoContainer.innerHTML +=`
+        <h3>${video.snippet.title}</h3> 
         <img src="${video.snippet.thumbnails.high.url}">
         `
     }

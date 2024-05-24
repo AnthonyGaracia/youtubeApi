@@ -12,7 +12,8 @@ fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=U
     for(video of videos){
         videoContainer.innerHTML +=`
         <h3>${video.snippet.title}</h3> 
-        <img src="${video.snippet.thumbnails.high.url}">
-        `
+       <a href="https://www.youtube.com/watch?v=">
+       <img src="${video.snippet.thumbnails.high.url}">
+        </a>`
     }
 })

@@ -8,11 +8,11 @@ fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=U
     console.log(data)
     let videos = data.items
    
-    let videoContainer = document.querySelector(".youtubeContainer")
+    let videoContainer = document.querySelector('.youtubeContainer')
     for(video of videos){
         videoContainer.innerHTML +=`
         <h3>${video.snippet.title}</h3> 
-       <a href="https://www.youtube.com/watch?v=">
+       <a href="https://www.youtube.com/watch?v=" class="utubeCon">
        <img src="${video.snippet.thumbnails.high.url}">
         </a>`
     }
